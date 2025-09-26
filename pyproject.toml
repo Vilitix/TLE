@@ -14,6 +14,7 @@ dependencies = [
   "seaborn",
   # Images
   "pillow",
+  "pycairo",
 ]
 
 [project.optional-dependencies]

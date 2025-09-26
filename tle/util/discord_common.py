@@ -128,25 +128,6 @@ def on_ready_event_once(bot):
 async def presence(bot):
     await bot.change_presence(
         activity=discord.Activity(
-            type=discord.ActivityType.listening, name='your commands'
+            type=discord.ActivityType.playing, name='type ;help'
         )
     )
-    await asyncio.sleep(60)
-
-    @tasks.task(name='OrzUpdate', waiter=tasks.Waiter.fixed_delay(5 * 60))
-    async def presence_task(_):
-        while True:
-            target = random.choice(
-                [
-                    member
-                    for member in bot.get_all_members()
-                    if constants.TLE_PURGATORY
-                    not in {role.name for role in member.roles}
-                ]
-            )
-            await bot.change_presence(
-                activity=discord.Game(name=f'{target.display_name} orz')
-            )
-            await asyncio.sleep(10 * 60)
-
-    presence_task.start()
