@@ -16,7 +16,7 @@ from tle.util import (
 from tle.util.db.user_db_conn import Gitgud
 
 _GITGUD_NO_SKIP_TIME = 3 * 60 * 60
-_GITGUD_SCORE_DISTRIB = (2, 3, 5, 8, 12, 17, 23,23, 23,23, 23,23, 23,23,23,23, 23,23, 23,23, 23,23)
+_GITGUD_SCORE_DISTRIB = (20, 20, 20, 20, 20, 20, 20, 20 20, 20, 20, 20,20, 20, 20, 20)
 _GITGUD_MAX_ABS_DELTA_VALUE = 9999
 
 
